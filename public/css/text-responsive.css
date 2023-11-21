@@ -1,0 +1,18 @@
+/* Estilo padrão */
+.text-responsive {
+    font-size: 1.3rem; /* Tamanho de fonte padrão */
+}
+
+/* Estilo para telas médias */
+@media (max-width: 992px) {
+    .text-responsive {
+        font-size: 0.9rem; /* Reduza o tamanho do texto para telas médias */
+    }
+}
+
+/* Estilo para telas pequenas */
+@media (max-width: 768px) {
+    .text-responsive {
+        font-size: 0.8rem; /* Reduza ainda mais o tamanho do texto para telas pequenas */
+    }
+}

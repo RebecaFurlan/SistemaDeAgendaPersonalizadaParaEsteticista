@@ -1,0 +1,51 @@
+header{
+    font-size: 35px;
+    font-family: Century Gothic;
+}
+.navbar{
+    background-color: #c039b5;
+    color: E0AAFF;
+  
+
+}
+.navbar a{
+    color: black;
+    font-weight: bold;
+}
+.navbar a:hover{
+    color: #af6e31;
+}
+
+.navbar-nav {
+    margin-left: 0;
+}
+
+
+.container-logo img {
+    height: 16vw;
+
+}
+
+
+ul{
+    margin-right: 3vw;
+}
+
+/* Tamanho do texto em telas pequenas (até 576px) */
+@media (max-width: 576px) {
+    header{
+        font-size: 15px;
+        font-family: Century Gothic;
+    }
+}
+
+/* Tamanho do texto em telas médias (de 577px a 992px) */
+@media (min-width: 577px) and (max-width: 992px) {
+    header{
+        font-size: 30px;
+        font-family: Century Gothic;
+    }
+}
+
+
+

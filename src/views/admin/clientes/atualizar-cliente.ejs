@@ -1,0 +1,74 @@
+<html>
+<%-include ('../../partials/head.ejs'); %>
+
+<body class="colorm d-flex justify-content-center align-items-center text-responsive">
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-1 mb-1">
+                <a href="/agendamento/agenda-dia" class="btn btn-secondary"><</a>
+            </div>
+            <div class="col-md-8 py-3 rounded d-flex justify-content-center order-md-2" style="background-color: white;">
+                <main class="w-75 flex-column">
+                    <div class="d-flex align-items-center justify-content-center mb-5 mt-3">
+                        <img src="/image/ico-clientes-maior.png" alt="" class="img-fluid">
+                        <h2 class="fw-bolder ml-5" style="color: #E0AAFF; margin-left: 1rem;">Clientes</h2>
+                    </div>          
+                    <div class="row p-0">
+                        <% if (typeof error !== 'undefined' && error) { %>
+                            <span class="alert alert-danger p-1 m-1" role="alert" style="font-size: 14px;">
+                                <%= error %>
+                            </span>
+                        <% } %>
+                    </div>        
+                    <form id="clienteForm" action="/cliente/atualizar" method="POST">
+                        <input type="hidden" name="id" value="<%= cliente.id %>">
+                        <div class="row">
+                            <div class="form-group mb-4 d-md-block">
+                                <label for="nome" class="form-label">Nome</label>
+                                <input type="text" class="form-control" id="nome" name="nome"  value="<%= cliente.nome%>" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6  mb-4">
+                                <label for="CPF" class="form-label">CPF</label>
+                                <input type="text" class="form-control" id="CPF" name="CPF" value="<%= cliente.CPF%>"  placeholder="000.000.000-00" required>
+                            </div>
+                            <div class="col-md-6  mb-4">
+                                <label for="RG" class="form-label">RG</label>
+                                <input type="text" class="form-control" id="RG" name="RG"  value="<%= cliente.RG%>" placeholder="00.000.000-0" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group mb-4 d-md-block">
+                                <label for="endereco" class="form-label">Endereço</label>
+                                <input type="text" class="form-control" id="endereco"   value="<%= cliente.endereco%>" name="endereco" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6  mb-4">
+                                <label for="whatsapp" class="form-label">WhatsApp</label>
+                                <input type="text" class="form-control" id="whatsapp" name="whatsapp"  value="<%= cliente.whatsapp%>" placeholder="(00) 00000-0000" required>
+                            </div>
+                            <div class="col-md-6  mb-4">
+                                <label for="email" class="form-label">E-mail</label>
+                                <input type="text" class="form-control" id="email" name="email"  value="<%= cliente.email%>" required>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-block w-100 gradient-custom mt-5 mb-5" 
+                            style="background-color: #E0AAFF;">Atualizar</button>
+                    </form>
+                </main>
+            </div>
+            <div class="col-md-1">
+            </div>
+        </div>
+        <div class="row mt-5 mb-auto" style="font-size: 1vw;">
+            <div class="col-12">
+                <p class="text-center mt-5"> <img src="/image/copyright.png" alt=""> 2023 Espaço Ana. Todos os direitos reservados</p>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="/js/telaAgendamento.js"></script>
+</html>

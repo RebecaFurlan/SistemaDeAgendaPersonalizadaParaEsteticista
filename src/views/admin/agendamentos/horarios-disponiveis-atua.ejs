@@ -1,0 +1,94 @@
+<html>
+<%-include ('../../partials/head.ejs'); %>
+
+<body class="colorm d-flex justify-content-center align-items-center text-responsive">
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-1 mb-1">
+                <a href="/agendamento/agenda-dia" class="btn btn-secondary"><</a>
+            </div>
+            <div class="col-md-8 py-3 rounded d-flex justify-content-center order-md-2" style="background-color: white;">
+                <main class="w-75 flex-column">
+                  <div class="d-flex align-items-center justify-content-center mb-5 mt-3">
+                    <img src="/image/clock.png" alt="" class="img-fluid">
+                    <h2 class="fw-bolder ml-5" style="color: #E0AAFF; margin-left: 1rem;">Atualizar - Horarios Disponiveis</h2>
+                </div> 
+                    <form id="agendamentoForm" action="/agendamento/atualizar" method="POST">
+
+                      <div class="row mb-4">
+                          <label class="fs-4 form-label text-center" for="hora">Horarios </label>
+                          <div class="btn-group d-block mx-auto" role="group" data-toggle="buttons">
+                            <% horariosDisponiveis.forEach(horario => { %>
+                                <label class="btn btn-outline-primary mb-2 radiocustom">
+                                    <input type="radio" name="hora" value="<%= horario %>" required autocomplete="off">
+                                    <%= horario %>
+                                </label>
+                            <% }); %>
+                        </div>
+                    </div>
+                    
+                        <div class="row">
+                            <div class="col-md-3  mb-4">
+                                <div class="form-group">
+                                    <label for="ClienteId" class="fs-5 form-label">Cliente:</label>
+                                    <p class="fs-5"> <%=cliente.nome%></p>
+                                </div>
+                            </div>
+                            <div class="col-md-3  mb-4">
+                              <div class="form-group">
+                                  <label for="ClienteCPF" class="fs-5 form-label">CPF:</label>
+                                  <p class="fs-5"> <%=cliente.CPF%></p>
+                              </div>
+                          </div>
+                            <div class="col-md-3 mb-4">
+                                <div class="form-group">
+                                    <label for="ServicoId" class="fs-5 form-label">Serviço:</label>
+                                    <p class="fs-5"> <%=servico.nome%></p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 mb-4">
+                              <div class="form-group">
+                                  <label for="data" class="fs-5 form-label">Data:</label>
+                                  <p class="fs-5" id="formattedDate"><%= data %></p>
+                              </div>
+                          </div>
+                          
+                        </div>
+                        <input type="hidden" name="ClienteId" value="<%= cliente.id %>">
+                        <input type="hidden" name="ServicoId" value="<%= servico.id %>">
+                        <input type="hidden" id="datepicker" name="data" value="<%= data %>">
+                        <input type="hidden" name="agendamentoID" value="<%= agendamentoID %>">
+                        <input type="hidden" id="status" name="status" value="Ativo">
+                        <button type="submit" class="btn btn-block w-100 gradient-custom mt-5 mb-5" 
+                            style="background-color: #E0AAFF;">Agendar Horario</button>
+                    </form>
+                </main>
+            </div>
+            <div class="col-md-1">
+            </div>
+        </div>
+        <div class="row mt-5 mb-auto" style="font-size: 1vw;">
+            <div class="col-12">
+                <p class="text-center mt-5"> <img src="/image/copyright.png" alt=""> 2023 Espaço Ana. Todos os direitos reservados</p>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+      var rawDate = "<%= data %>"; // Obtenha a data no formato padrão (ISO)
+  
+      // Formate a data para "dd/MM/yyyy"
+      var formattedDate = new Date(rawDate).toLocaleDateString("pt-BR", {
+          day: "2-digit",
+          month: "2-digit",
+          year: "numeric"
+      });
+  
+      // Atualize o elemento "formattedDate" com a data formatada
+      document.getElementById("formattedDate").textContent = formattedDate;
+  });
+  </script>
+  
+</html>

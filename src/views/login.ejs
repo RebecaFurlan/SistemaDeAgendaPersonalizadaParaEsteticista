@@ -1,0 +1,44 @@
+<html>
+<%-include ('./partials/head.ejs'); %>
+
+<body class="colorm d-flex justify-content-center align-items-center text-responsive">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4 order-md-1 d-flex justify-content-center mb-5">
+                <a class="img-login mb-5" href="/"><img src="/image/logo2.png"> </a>
+            </div>
+            <div class="col-md-7 py-3 rounded d-flex justify-content-center order-md-2" style="background-color: white;">
+                <main class="w-75">
+                    <h2 class="fw-bolder mb-5 text-center" style="color: #E0AAFF;">Agenda Esteticista</h2>
+                    <form action="/login" method="POST">
+                        <div class="mb-3">
+                            <label for="nome" class="form-label">Login</label>
+                            <input type="text" class="form-control" id="user" name="user" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="pass" class="form-label">Senha</label>
+                            <input type="password" class="form-control" id="pass" name="pass" required>
+                        </div>
+                        <button type="submit" class="btn btn-block w-100 gradient-custom"
+                            style="background-color: #E0AAFF;">Entrar</button>
+                    </form>
+                </main>
+            </div>
+        </div>
+        <div class="row mt-5 mb-auto" style="font-size: 1vw;">
+            <div class="col-12">
+                <p class="text-center mt-5"> <img src="/image/copyright.png" alt=""> 2023 Espaço Ana. Todos os direitos reservados</p>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    
+    const errorMessage = '<%= error %>'; 
+
+    if (errorMessage) {
+        alert(errorMessage);
+    }
+</script>
+
+</html>

@@ -1,0 +1,33 @@
+<%- include('../../partials/head.ejs'); %>
+<body>
+  <div class="container-fluid">
+    <div class="row flex-nowrap">
+      <div class="col-auto col-md-3 col-xl-2 sidebar">
+        <%- include('../../partials/sidebar.ejs'); %>
+      </div>
+      <div class="col py-3 colorp">
+        <main>
+          <div class="container mt-5 text-responsive" style="color: white">
+            <div class="row text-center">
+              <p class="fs-1 fw-bold mb-4">AGENDA DO DIA</p>
+            </div>
+            <div class="row">
+              <ul class="list-group">
+                  <% horariosComStatus.forEach(function(item) { %>
+                    <% if (item.status === 'Disponível') { %>
+                    <li class="mt-5 pl-3" style="color: green;"><%= item.horario %>: <%= item.status %></li>
+                    <% } else if (item.status === 'Horario não agendado!') { %>
+                      <li class="mt-5 pl-3" style="color: red;"><%= item.horario %>: <%= item.status %></li>
+                    <% }else { %>
+                      <li class="mt-5 pl-3" style="color: white;"><%= item.horario %>: <%= item.status %></li>
+                    <% } %>
+                  <% }); %>
+              </ul>
+           </div>
+          </div>
+        </main>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

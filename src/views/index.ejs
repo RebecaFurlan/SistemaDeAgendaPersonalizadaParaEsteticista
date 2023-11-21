@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%-include ('./partials/head.ejs'); %>
+    <body class="d-flex flex-column h-100">
+        <main class="flex-shrink-0">
+            <!-- Navigation-->
+            <nav class="navbar navbar-expand-lg">
+                <div class="container px-5">
+                    <a class="navbar-brand" href="#"><img src="/image/logo2.png"> </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item"><a class="nav-link s-4 mb-4" href="#">Home</a></li>
+                            <li class="nav-item"><a class="nav-link s-4 mb-4 " href="#dire">Diretrizes</a></li>
+                            <li class="nav-item"><a class="nav-link s-4 mb-4 " href="#servicos">Serviços</a></li>
+                            <li class="nav-item"><a class="nav-link s-4 mb-4 " href="#about">Quem somos</a></li>
+                            <li class="nav-item"><a class="nav-link s-4 mb-4 " href="#contato">Contact</a></li>
+                            <li class="nav-item"><a class="nav-link s-4 mb-4 " href="#consultar">Consultar</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <section class="py-2 d-flex justify-content-center colorm mb-4">
+                <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                    <ol class="carousel-indicators mt-5">
+                        <li data-bs-target="#carouselExampleInterval" data-bs-slide-to="0" class="active" style="background-color: #10002B;"></li>
+                        <li data-bs-target="#carouselExampleInterval" data-bs-slide-to="1" style="background-color: #10002B;"></li>
+                        <li data-bs-target="#carouselExampleInterval" data-bs-slide-to="2" style="background-color: #10002B;"></li>
+                    </ol>
+                    <div class="carousel-inner mb-4">
+                        <div class="carousel-item active" data-bs-interval="4000">
+                            <div class="container px-5">
+                                <div class="row gx-5 align-items-center justify-content-center">
+                                    <div class="col-lg-8 col-xl-7 col-xxl-6">
+                                        <div class="my-5 text-center text-xl-start">
+                                            <h1 class="display-5 fw-bolder text-white mb-2">Cuide de Você, Transforme-se Conosco</h1>
+                                            <p class="lead fw-normal text-black-50 mb-4">O <strong>Espaço Ana</strong> é mais do que uma clínica de estética, é um oásis de beleza e bem-estar dedicado a realçar a sua beleza natural e elevar a sua confiança. Nossa clínica é um refúgio de tranquilidade, projetado para proporcionar a você uma experiência relaxante e rejuvenescedora.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-2 my-5" src="/image/nav.webp"/></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item" data-bs-interval="4000">
+                            <div class="container px-5">
+                                <div class="row gx-5 align-items-center justify-content-center">
+                                    <div class="col-lg-8 col-xl-7 col-xxl-6">
+                                        <div class="my-5 text-center text-xl-start">
+                                            <h1 class="display-5 fw-bolder text-white mb-2">Celebre Seu Aniversário com Estilo!</h1>
+                                            <p class="lead fw-normal text-black-50 mb-4">No <strong>Espaço Ana</strong> acreditamos que o seu aniversário merece ser celebrado com estilo e cuidado. É por isso que estamos oferecendo uma Promoção de Aniversariante Especial para tornar o seu dia ainda mais especial.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-2 my-5"src="/image/desconto.png"/></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item" data-bs-interval="4000">
+                            <div class="container px-5">
+                                <div class="row gx-5 align-items-center justify-content-center">
+                                    <div class="col-lg-8 col-xl-7 col-xxl-6">
+                                        <div class="my-5 text-center text-xl-start">
+                                            <h1 class="display-5 fw-bolder text-white mb-2">Equipamentos e Produtos Premium!</h1>
+                                            <p class="lead fw-normal text-black-50 mb-4">No <strong>Espaço Ana</strong> garantimos excelência em beleza e bem-estar. Utilizamos produtos premium e equipamentos de última geração para oferecer tratamentos de qualidade excepcional. Sua satisfação e aparência deslumbrante são nossa prioridade.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-2 my-5" src="/image/equipamentos.jpg"/></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="dire" class="text-center mb-5">
+                <div class="container">
+                    <div class="mb-5">
+                        <div class="fs-1 mb-4">
+                             Nossas Diretrizes!
+                        </div>
+                    </div>
+                    <div class="row d-flex justify-content-center mt-5 mb-5">
+                        <div class="col-md-3">
+                            <div class="box ">
+                              <div class="img-box">
+                                <img class="img-fluid" src="image/icon1.png" alt="">
+                              </div>
+                              <div class="detail-box mt-4">
+                                <h5>
+                                    "O Seu Brilho"
+                                </h5>
+                              </div>
+                            </div>
+                          </div>
+                      <div class="col-md-3">
+                        <div class="box ">
+                          <div class="img-box">
+                            <img class="img-fluid" src="image/icon2.png" alt="">
+                          </div>
+                          <div class="detail-box mt-4">
+                            <h5>
+                                "Beleza e Bem-Estar"
+                            </h5>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="box ">
+                          <div class="img-box">
+                            <img class="img-fluid" src="image/icon3.png" alt="">
+                          </div>
+                          <div class="detail-box mt-4">
+                            <h5>
+                                "O Seu Melhor Eu"
+                            </h5>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+              </section>
+               <!-- Serviços -->
+               <div id="servicos" class="min-vh-50 colorca mt-5">
+                <ul class="nav nav-pills mb-3 d-flex justify-content-center" id="pills-tab" role="tablist">
+                    <li class="nav-item custom-nav-item" role="presentation">
+                        <a class="nav-link active text-responsive" id="pills-service1-tab" data-bs-toggle="pill" href="#pills-service1" role="tab"
+                            aria-controls="pills-service1" aria-selected="true">Design de Sobrancelhas</a>
+                    </li>
+                    <li class="nav-item custom-nav-item" role="presentation">
+                        <a class="nav-link text-responsive" id="pills-service2-tab" data-bs-toggle="pill" href="#pills-service2" role="tab"
+                            aria-controls="pills-service2" aria-selected="false">Micropigmentação</a>
+                    </li>
+                    <li class="nav-item custom-nav-item" role="presentation">
+                        <a class="nav-link text-responsive" id="pills-service3-tab" data-bs-toggle="pill" href="#pills-service3" role="tab"
+                            aria-controls="pills-service3" aria-selected="false">Henna</a>
+                    </li>
+                    <li class="nav-item custom-nav-item" role="presentation">
+                        <a class="nav-link text-responsive" id="pills-service4-tab" data-bs-toggle="pill" href="#pills-service4" role="tab"
+                            aria-controls="pills-service4" aria-selected="false">Remoção de Laser</a>
+                    </li>
+                    <li class="nav-item custom-nav-item" role="presentation">
+                        <a class="nav-link text-responsive" id="pills-service5-tab" data-bs-toggle="pill" href="#pills-service5" role="tab"
+                            aria-controls="pills-service5" aria-selected="false">Limpeza de Pele</a>
+                    </li>
+                    <li class="nav-item custom-nav-item" role="presentation">
+                        <a class="nav-link text-responsive" id="pills-service6-tab" data-bs-toggle="pill" href="#pills-service6" role="tab"
+                            aria-controls="pills-service6" aria-selected="false">Depilação</a>
+                    </li>
+                    <li class="nav-item custom-nav-item" role="presentation">
+                        <a class="nav-link text-responsive" id="pills-service7-tab" data-bs-toggle="pill" href="#pills-service7" role="tab"
+                            aria-controls="pills-service7" aria-selected="false">Alongamento de Cílios</a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-service1" role="tabpanel" aria-labelledby="pills-service1-tab">
+                        <section>
+                            <div class="container-fluid px-5">
+                                <div class="row gx-5 align-items-center">
+                                    <div class="col-lg-6">
+                                        <div class="p-5 d-flex justify-content-center align-items-center">
+                                            <img class="card-img-top mx-auto my-auto rounded-circle img-fluid" style="width: 70%;"
+                                                src="./image/des.avif" alt="Card image cap">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="p-1">
+                                            <h2 class="display-5 text-responsive">Design de Sobrancelhas</h2>
+                                            <p class="text-responsive">O nosso serviço de design de sobrancelhas oferece uma transformação completa para realçar a beleza natural dos seus olhos. Nossos especialistas em design trabalham com você para criar sobrancelhas que complementem perfeitamente o seu rosto, destacando seus traços e proporcionando uma aparência sofisticada e bem cuidada.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="tab-pane fade" id="pills-service2" role="tabpanel" aria-labelledby="pills-service2-tab">
+                        <section>
+                            <div class="container-fluid px-5">
+                                <div class="row gx-5 align-items-center">
+                                    <div class="col-lg-6 order-lg-1">
+                                        <div class="p-5 d-flex justify-content-center align-items-center">
+                                            <img class="card-img-top mx-auto my-auto rounded-circle img-fluid" style="width: 70%;"
+                                                src="./image/sombra.avif" alt="Card image cap">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 order-lg-2">
+                                        <div class="p-1">
+                                            <h2 class="display-5 text-responsive">Micropigmentação</h2>
+                                            <p class="text-responsive">A micropigmentação é uma técnica avançada que oferece resultados semelhantes à maquiagem permanente. Com precisão e arte, nossos especialistas aplicam pigmentos na camada superior da pele para melhorar e definir suas sobrancelhas, olhos e lábios, proporcionando uma aparência natural e duradoura.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="tab-pane fade" id="pills-service3" role="tabpanel" aria-labelledby="pills-service3-tab">
+                        <section>
+                            <div class="container-fluid px-5">
+                                <div class="row gx-5 align-items-center">
+                                    <div class="col-lg-6">
+                                        <div class="p-5 d-flex justify-content-center align-items-center">
+                                            <img class="card-img-top mx-auto my-auto rounded-circle img-fluid" style="width: 70%;"
+                                                src="./image/hena.avif" alt="Card image cap">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="p-1">
+                                            <h2 class="display-4 text-responsive">Henna</h2>
+                                            <p class="text-responsive">Nossos serviços de henna oferecem uma alternativa segura e temporária à tintura de sobrancelhas. Utilizamos henna de alta qualidade para tingir suas sobrancelhas de forma vibrante, criando uma aparência exuberante e definida que dura várias semanas.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="tab-pane fade" id="pills-service4" role="tabpanel" aria-labelledby="pills-service4-tab">
+                        <section>
+                            <div class="container-fluid px-5">
+                                <div class="row gx-5 align-items-center">
+                                    <div class="col-lg-6 order-lg-1">
+                                        <div class="p-5 d-flex justify-content-center align-items-center">
+                                            <img class="card-img-top mx-auto my-auto rounded-circle img-fluid" style="width: 70%;"
+                                                src="./image/pig.avif" alt="Card image cap">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 order-lg-2">
+                                        <div class="p-1">
+                                            <h2 class="display-4 text-responsive">Remoção de Laser</h2>
+                                            <p class="text-responsive">A remoção de laser é um método eficaz para eliminar pelos indesejados de forma duradoura. Com tecnologia avançada, nossos especialistas ajudam você a alcançar uma pele suave e livre de pelos, com sessões personalizadas para atender às suas necessidades específicas.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="tab-pane fade" id="pills-service5" role="tabpanel" aria-labelledby="pills-service5-tab">
+                        <section>
+                            <div class="container-fluid px-5">
+                                <div class="row gx-5 align-items-center">
+                                    <div class="col-lg-6">
+                                        <div class="p-5 d-flex justify-content-center align-items-center">
+                                            <img class="card-img-top mx-auto my-auto rounded-circle img-fluid" style="width: 70%;"
+                                                src="./image/pele.avif" alt="Card image cap">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="p-1">
+                                            <h2 class="display-4 text-responsive">Limpeza de Pele</h2>
+                                            <p class="text-responsive">Nossos tratamentos de limpeza de pele oferecem uma experiência rejuvenescedora para sua pele. Com produtos de alta qualidade e técnicas suaves, removemos impurezas, revitalizamos e hidratamos sua pele, deixando-a com uma sensação refrescante e radiante.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="tab-pane fade" id="pills-service6" role="tabpanel" aria-labelledby="pills-service6-tab">
+                        <section>
+                            <div class="container-fluid px-5">
+                                <div class="row gx-5 align-items-center">
+                                    <div class="col-lg-6 order-lg-1">
+                                        <div class="p-5 d-flex justify-content-center align-items-center">
+                                            <img class="card-img-top mx-auto my-auto rounded-circle img-fluid" style="width: 70%;"
+                                                src="./image/depi.avif" alt="Card image cap">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 order-lg-2">
+                                        <div class="p-1">
+                                            <h2 class="display-4 text-responsive">Depilação</h2>
+                                            <p class="text-responsive">Oferecemos serviços de depilação precisos e eficientes para remover pelos de áreas indesejadas. Nossos profissionais utilizam métodos que minimizam o desconforto e proporcionam uma pele macia e livre de pelos.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="tab-pane fade" id="pills-service7" role="tabpanel" aria-labelledby="pills-service7-tab">
+                        <section>
+                            <div class="container-fluid px-5">
+                                <div class="row gx-5 align-items-center">
+                                    <div class="col-lg-6">
+                                        <div class="p-5 d-flex justify-content-center align-items-center">
+                                            <img class="card-img-top mx-auto my-auto rounded-circle img-fluid" style="width: 70%;"
+                                                src="./image/alog.avif" alt="Card image cap">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="p-1">
+                                            <h2 class="display-4 text-responsive">Alongamento de Cílios</h2>
+                                            <p class="text-responsive">O alongamento de cílios é a chave para cílios mais longos, espessos e curvados, realçando a beleza dos seus olhos. Nossos especialistas aplicam cílios individuais com habilidade, proporcionando um olhar encantador e natural que requer pouco ou nenhum rímel.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+            <!-- Blog preview section-->
+            <section id="about" class="py-5">
+                <div class="container px-5">
+                    <div class="row gx-5 text-center mb-5">
+                        <div class="col-lg-12">
+                            <p class="fs-1 mb-4" >Quem somos</p>
+                            <img class="imgline mt-2" src="/image/line.png" alt="">
+                            <p class="fs-4 mt-3">Os melhores tratamentos corporais e faciais para deixar você ainda mais linda e saudável!</p>
+                        </div>
+                    </div>
+                    <div class="row gx-5 align-items-center">
+                        <div class="col-lg-7">
+                            <div class="text-center text-xl-start">
+                                <p class="fs-4" style="color: #3CA7E6;">Conceito</p>
+                                <p class="lead fw-normal text-black-50 mb-4">Contando com equipamentos de alta tecnologia, profissionais qualificados e tratamentos com protocolos testados e aprovados que utilizam os melhores princípios ativos do mercado, oferecemos qualidade e eficiência para homens e mulheres que desejam cuidar da beleza e da saúde. <br><br>Aqui nós cuidamos de você, pois acreditamos que beleza é sentir-se bem e feliz com sua saúde e aparência.</p>
+                            </div>
+                            <div class="text-center text-xl-start">
+                                <p class="fs-4" style="color: #E0AAFF;">Missão</p>
+                                <p class="lead fw-normal text-black-50 mb-4">Oferecer a todas as pessoas condições de melhorar sua qualidade de vida proporcionando tratamentos eficientes e ao alcance de todos. <br><br> Buscar a inovação para promover os melhores tratamentos sempre com ética e qualidade, respeitando todas as pessoas e seus limites.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 text-center">
+                            <img class="card-img-top mx-auto my-auto rounded-circle img-fluid  border-2" style="width: 70%; box-shadow: 5px 5px 10px rgba(136, 8, 175, 0.2); border-color: #E0AAFF;" src="./image/equipa.jpg" alt="Card image cap">
+                            <img class="card-img-top mx-auto my-auto rounded-circle img-fluid mt-5 border-2" style="width: 70%; box-shadow: 5px 5px 10px rgba(17, 118, 212, 0.2);" src="./image/missao.jpg" alt="Card image cap">
+                        </div>                        
+                    </div>
+                    
+                </div>
+            </section>
+            <section id="contato" class="bg-light py-5">
+                <div class="container px-5">
+                    <div class="row gx-5 text-center mb-5">
+                        <div class="col-lg-12">
+                            <p class="fs-1 mb-4" >Agende Seu Horario!</p>
+                            <img class="imgline mt-2" src="/image/line.png" alt="">
+                            <p class="fs-3 mt-3">Nossos agendamentos são realizados por Telefone/Whatsapp</p>
+                            <p class="fs-5 mt-3"><strong>Horario:</strong>  09:00 as 18:00  <strong> | </strong> <strong>Dias:</strong> Segunda á Sabado </p>
+                        </div>
+                    </div>
+                    <div class="row gx-5 align-items-center">
+                        <div class="col-lg-7">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <p class="fs-4 " style="color: #3CA7E6;">Telefone</p>
+                                    <p class="lead fw-normal text-black-50 mb-4 d-block">+55 2354-4322</p>
+                                </div>
+                                <div class="col-lg-6">
+                                    <p class="fs-4 " style="color: #3CA7E6;">Whatsapp</p>
+                                    <p class="lead fw-normal text-black-50 mb-4 d-block">+55 (11) 92354-4322</p>
+                                </div>
+                            </div>
+                            <div class="text-center text-xl-start">
+                                <p class="fs-4" style="color: #E0AAFF;">Para mais Contatos ou Dúvidas</p>
+                                <form action="mailto:contact@espacoana.com" method="post" enctype="text/plain">
+                                    <div class="mb-3">
+                                        <label for="nome" class="form-label">Nome</label>
+                                        <input type="text" class="form-control" id="nome" name="nome" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="email" name="email" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="telefone" class="form-label">Telefone</label>
+                                        <input type="tel" class="form-control" id="telefone" name="telefone" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="mensagem" class="form-label">Mensagem</label>
+                                        <textarea class="form-control" id="mensagem" name="mensagem" rows="4" required></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-block w-100 gradient-custom" style="background-color: #E0AAFF;">Enviar</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 text-center">
+                            <img class="card-img-top mx-auto my-auto  img-fluid" src="./image/agenda.png" alt="Card image cap">
+                        </div>                        
+                    </div>
+                    
+                </div>
+            </section>
+            <section id="consultar" class="py-5">
+                <div class="container px-5">
+                    <div class="row gx-5 text-center mb-5">
+                        <div class="col-lg-12">
+                            <p class="fs-1 mb-4" >Consulte Seus Horarios</p>
+                            <img class="imgline mt-2" src="/image/line.png" alt="">
+                            <p class="fs-5 mt-3">Para consultar forneça seu CPF ou whatsapp</p>
+                        </div>
+                    </div>
+                    <div class="row gx-5 d-flex align-items-center justify-content-center flex-column">  
+                        <div class="col-lg-12 w-50 text-center ">
+                            <form id="agendamento-form" action="/agendamento/verifica-agendamentos" method="post" onsubmit="return validarForm()">
+                                <div class="mb-3">
+                                    <label for="cpf" class="form-label">CPF</label>
+                                    <input type="text" class="form-control" id="cpf" name="cpf" placeholder="000.000.000-00">
+                                </div>
+                                <hr>
+                                <div class="mb-3">
+                                    <label for="whatsapp" class="form-label">Whatsapp</label>
+                                    <input type="text" class="form-control" id="whatsapp" name="whatsapp" placeholder="(00) 0000-0000">
+                                </div>
+                                <button type="submit" class="btn btn-block w-100 gradient-custom" style="background-color: #E0AAFF;">Consultar</button>
+                            </form>
+                        </div>         
+                    </div>
+                    
+                </div>
+            </section>
+        </main>
+        <!-- Footer-->
+       <%-include ('./partials/footer.ejs'); %>
+       <script>
+            function validarForm() {
+                var cpf = document.getElementById("cpf").value;
+                var whatsapp = document.getElementById("whatsapp").value;
+        
+                if (cpf.trim() === "" && whatsapp.trim() === "") {
+                    alert("Por favor, preencha pelo menos um dos campos (CPF ou Whatsapp).");
+                    return false; // Impede o envio do formulário
+                } else if (cpf.trim() !== "" && whatsapp.trim() !== "") {
+                    alert("Por favor, preencha apenas um dos campos (CPF ou Whatsapp).");
+                    return false; // Impede o envio do formulário se ambos os campos estiverem preenchidos
+                }
+                return true; // Permite o envio do formulário se pelo menos um campo estiver preenchido
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,230 @@
+* {
+    padding: 0;
+    margin: 0;
+    vertical-align: baseline;
+    list-style: none;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+
+}
+input.form-control:focus {
+    border-color: #E0AAFF;
+    box-shadow: 0 0 5px #E0AAFF;
+}
+
+
+select.form-select:focus {
+    border-color: #E0AAFF;
+    box-shadow: 0 0 5px #E0AAFF;
+
+}
+
+.radiocustom{
+    color: #E0AAFF;
+    border-color:black;
+}
+
+.radiocustom:hover{
+    background-color: #E0AAFF;
+    box-shadow: 0 0 5px #E0AAFF;
+    border-color:#E0AAFF ;
+}
+
+select.form-select option:checked {
+    background-color: #E0AAFF;
+}
+
+
+.imgline {
+    max-width: 45%;
+    height: auto; 
+    display: block;
+    margin: 0 auto; 
+}
+.colorp{
+    background-color: #E0AAFF;
+}
+.colorm{
+    background: linear-gradient(to bottom, #E0AAFF, white);
+}
+.colorca{
+    background: linear-gradient(to top, #3CA7E6, white, white, white);
+}
+
+.colora{
+    background: linear-gradient(to bottom, #3CA7E6, white, white, white);
+}
+/* navbar*/
+.navbar-brand img{
+    height: 10vw;
+}
+nav{
+    background-color: #F8EBFF;
+}
+
+
+.nav-link{
+    font-size: 20px;
+}
+
+.horizontal-line {
+    border: 0; /* Remove a borda padrão do elemento hr */
+    height: 2px; /* Altura da linha horizontal */
+    margin: 0; /* Remova qualquer margem que possa ser aplicada ao elemento hr */
+}
+.navbar-collapse a:hover{
+    font-size: 1.2rem;
+    color: #E0AAFF;
+}
+.gradient-custom {
+  /* fallback for old browsers */
+  background: #c471f5;
+
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to right, rgba(196, 113, 245, 1), rgba(250, 113, 205, 1));
+
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, rgba(196, 113, 245, 1), rgba(250, 113, 205, 1))
+}
+
+.gradient-custom-azul {
+    /* fallback for old browsers */
+    background: #3CA7E6;
+  
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(90deg, rgba(60,167,230,1) 9%, rgba(49,170,175,1) 99%);
+  
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(90deg, rgba(60,167,230,1) 9%, rgba(49,170,175,1) 99%);
+  }
+
+.spacee li{
+  margin-right: 20px;
+}
+
+.bg-marrom{
+    background-color: #dacec2;
+}
+
+/* Sobre */
+.aba{
+    border-radius: 0 10px 40px 0;
+    height: 80%; /* Ajuste a largura conforme necessário */
+}
+
+
+/* Serviços*/
+
+.min-vh-50 {
+    min-height: 60vh;
+}
+
+.nav-item a:hover{
+    font-size: 1.2rem;
+
+
+}
+
+.custom-nav-item .nav-link.active {
+    background-color: #3CA7E6; /* Cor de fundo desejada para a aba ativa */
+    color: #fff; /* Cor do texto da aba ativa */
+}
+
+.custom-nav-item .nav-link.active:hover {
+    background-color: #3CA7E6; /* Cor de fundo desejada para a aba ativa ao passar o mouse */
+    color: #fff; /* Cor do texto da aba ativa ao passar o mouse */
+}
+
+.custom-nav-item .nav-link {
+    color: #333; /* Cor do texto das abas inativas */
+}
+
+.custom-nav-item .nav-link:hover {
+    color: #3CA7E6; /* Cor do texto das abas inativas ao passar o mouse */
+    background-color: transparent; /* Fundo transparente ao passar o mouse nas abas inativas */
+}
+#services{
+    box-sizing: border-box;
+}
+
+
+#users{
+    background-color: white;
+    color: white;
+}
+
+.img-login img{
+    height: 25vw;
+}
+
+
+/* Tamanho do texto em telas grandes (mais de 992px) */
+@media (min-width: 993px) {
+    .img-ana {
+        max-width: 26vw; /* A imagem terá no máximo 100% da largura da div */
+        height: auto;
+        margin: 0 auto; /* Adicione isso para centralizar horizontalmente a imagem */
+    }
+    #users .img1{
+       height: 300px;
+    }
+    #users .img2{
+        height: 300px; /* Adicione isso para centralizar horizontalmente a imagem */
+    }
+}
+
+
+/* Estilos para telas médias (de 577px a 992px) */
+@media (min-width: 577px) and (max-width: 992px) {
+    .img-ana {
+        max-width: 40%;
+        height: auto;
+        margin: 0 auto; /* Adicione isso para centralizar horizontalmente a imagem */
+    }
+    
+    /* Adicione estilos para centralizar a seção verticalmente */
+    #about {
+        display: flex; /* Torna o container flexível */
+        flex-direction: column; /* Empilha elementos verticalmente */
+        align-items: center; /* Centraliza horizontalmente */
+        justify-content: center; /* Centraliza verticalmente */
+
+    }
+
+    #users .img1{
+        height: 200px;
+     }
+     #users .img2{
+         height: 200px; /* Adicione isso para centralizar horizontalmente a imagem */
+     }
+}
+
+/* Estilos para telas pequenas (menos de 992px) */
+@media (max-width: 992px) {
+    #about .row {
+        flex-direction: column-reverse; /* Inverte a ordem das colunas e empilha-as verticalmente */
+    }
+
+    .col-lg-6 {
+        width: 100%; /* A largura da coluna será de 100% para ocupar toda a largura da tela */
+        padding: 20px; /* Adicione algum espaço entre as colunas e o conteúdo */
+    }
+
+    .img-ana {
+        max-width: 40%;
+        height: auto;
+        margin: 0 auto; /* Adicione isso para centralizar horizontalmente a imagem */
+    }
+    #users .img1{
+        height: 150px;
+     }
+     #users .img2{
+         height: 150px; /* Adicione isso para centralizar horizontalmente a imagem */
+     }
+    
+}
+
+
+

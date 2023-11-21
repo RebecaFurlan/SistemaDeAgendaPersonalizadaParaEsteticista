@@ -1,0 +1,76 @@
+<html>
+<%-include ('../../partials/head.ejs'); %>
+
+<body class="colorm d-flex justify-content-center align-items-center text-responsive">
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-1 mb-1">
+                <a href="/agendamento/agenda-dia" class="btn btn-secondary"><</a>
+            </div>
+            <div class="col-md-8 py-3 rounded d-flex justify-content-center order-md-2" style="background-color: white;">
+                <main class="w-75 flex-column">
+                    <div class="d-flex align-items-center justify-content-center mb-5 mt-3">
+                        <img src="/image/ico-agendamento-maior.png" alt="" class="img-fluid">
+                        <h2 class="fw-bolder ml-5" style="color: #E0AAFF; margin-left: 1rem;">Agendamento</h2>
+                    </div>                    
+                    <form id="agendamentoForm" action="/agendamento/horarios-disponiveis" method="POST">
+                        <div class="row">
+                            <div class="form-group mb-4">
+                                <label class="fs-4 form-label" for="searchField">Buscar cliente por CPF ou Nome:</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="searchField" name="search" placeholder="Digite CPF ou Nome">
+                                    <button type="button" class="btn gradient-custom " id="searchButton">Pesquisar</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group mb-5 d-md-block">
+                                <label class="fs-4 form-label" for="ClienteId">Cliente</label>
+                                <select class="form-select" aria-label="elect example" id="ClienteId" name="ClienteId"  autocomplete="off" required>
+                                    <% clientes.forEach(cliente => { %>
+                                        <option value="<%= cliente.id %>" data-cpf="<%= cliente.CPF %>">
+                                            <%= cliente.nome %> (CPF: <%= cliente.CPF %>)
+                                        </option>
+                                    <% }); %>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6  mb-4">
+                                <div class="form-group">
+                                    <label for="ServicoId" class="fs-5 form-label">Serviço:</label>
+                                    <select class="form-select" aria-label="Default select example" id="ServicoId" name="ServicoId" required>
+                                        <% servicos.forEach(servico => { %>
+                                            <option value="<%= servico.id %>">
+                                                <%= servico.nome %>
+                                            </option>
+                                        <% }); %>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6  mb-4">
+                                <div class="form-group">
+                                    <label for="data" class="fs-5 form-label">Data:</label>
+                                    <input type="text" class="dateselect form-control" id="datepicker" autocomplete="off" name="data" required>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <button type="submit" class="btn btn-block w-100 gradient-custom mt-5 mb-5" 
+                            style="background-color: #E0AAFF;">Verificar horarios disponveis</button>
+                    </form>
+                </main>
+            </div>
+            <div class="col-md-1">
+            </div>
+        </div>
+        <div class="row mt-5 mb-auto" style="font-size: 1vw;">
+            <div class="col-12">
+                <p class="text-center mt-5"> <img src="/image/copyright.png" alt=""> 2023 Espaço Ana. Todos os direitos reservados</p>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="/js/telaAgendamento.js"></script>
+</html>
